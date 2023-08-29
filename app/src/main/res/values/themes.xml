@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Primary Colors -->
+    <color name="primaryColor">#D12E2E</color>
+    <color name="primaryLightColor">#CCD12E2E</color> <!-- 80% opacity -->
+    <color name="primaryExtraLightColor">#4DD12E2E</color> <!-- 30% opacity -->
+
+    <!-- Background Colors -->
+    <color name="BackgroundColor">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="textDarkColor">#1E232C</color>
+    <color name="textMediumColor">#CC1E232C</color> <!-- 80% opacity -->
+    <color name="textLightColor">#8F1E232C</color> <!-- 56% opacity -->
+
+    <!-- Custom Text Color Attributes -->
+    <attr name="textColorPrimaryLight" format="color" />
+    <attr name="textColorPrimaryExtraLight" format="color" />
+
+    <!-- Custom Buttons Style -->
+    <style name="PrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/primaryColor</item>
+        <item name="android:textColor">@color/BackgroundColor</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LeaveManagementSystem" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorSecondary">@color/primaryLightColor</item>
+        <item name="colorTertiary">@color/primaryExtraLightColor</item>
+        <item name="android:windowBackground">@color/BackgroundColor</item>
+
+        <item name="android:textColorPrimary">@color/textDarkColor</item>
+        <item name="textColorPrimaryLight">@color/textMediumColor</item>
+        <item name="textColorPrimaryExtraLight">@color/textLightColor</item>
+    </style>
+
+    <style name="Theme.LeaveManagementSystem" parent="Base.Theme.LeaveManagementSystem" />
+</resources>
