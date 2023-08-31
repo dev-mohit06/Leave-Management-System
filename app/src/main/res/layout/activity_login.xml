@@ -165,10 +165,11 @@
                             app:layout_constraintVertical_bias="0.615">
 
                             <ImageView
+                                android:id="@+id/password_toggle"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_gravity="center"
-                                android:src="@drawable/eye_open"
+                                android:src="@drawable/eye_close"
                                 android:contentDescription="@string/enter_your_password" />
 
                         </androidx.cardview.widget.CardView>
@@ -176,6 +177,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <CheckBox
+                        android:id="@+id/RememberMe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textMediumColor"
@@ -185,6 +187,7 @@
                         android:text="@string/remember_me"/>
 
                     <TextView
+                        android:id="@+id/Forgotpassword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
@@ -194,6 +197,7 @@
                         android:text="@string/forgot_password"/>
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/login"
                         style="@style/PrimaryButton"
                         android:layout_width="match_parent"
                         android:layout_height="66dp"
