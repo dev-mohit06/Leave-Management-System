@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".backend.students.MainActivity">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragmentParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navContainer"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/navContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/nav"
+            android:background="@color/BackgroundColor"
+            app:itemIconTint="@color/nav_font_icon_color"
+            app:itemActiveIndicatorStyle="@style/Nav"
+            app:itemTextColor="@color/nav_font_icon_color"
+            app:itemTextAppearanceActive="@style/NavItemSelectedFontFamily"
+            app:itemTextAppearanceInactive="@style/NavItemFont"
+            app:labelVisibilityMode="labeled"
+            />
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -13,6 +13,12 @@
     <color name="textMediumColor">#CC1E232C</color> <!-- 80% opacity -->
     <color name="textLightColor">#8F1E232C</color> <!-- 56% opacity -->
 
+    <!--  Indicators Colors  -->
+    <color name="pending">#EFC56F</color>
+    <color name="approved">#35C759</color>
+    <color name="denied">#CCD12E2E</color>
+
+
     <!-- Custom Text Color Attributes -->
     <attr name="textColorPrimaryLight" format="color" />
     <attr name="textColorPrimaryExtraLight" format="color" />
@@ -22,6 +28,20 @@
         <item name="android:backgroundTint">@color/primaryColor</item>
         <item name="android:textColor">@color/BackgroundColor</item>
     </style>
+
+    <!-- Custom Bottom Nav Style  -->
+    <style name="Nav" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/primaryExtraLightColor</item>
+    </style>
+    
+    <style name="NavItemSelectedFontFamily">
+        <item name="android:fontFamily">@font/urbanist_semibold</item>
+    </style>
+    <style name="NavItemFont">
+        <item name="android:fontFamily">@font/urbanist_medium</item>
+    </style>
+
+
 
     <!-- Base application theme. -->
     <style name="Base.Theme.LeaveManagementSystem" parent="Theme.Material3.DayNight.NoActionBar">

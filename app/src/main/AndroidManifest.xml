@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,13 +19,34 @@
         android:theme="@style/Theme.LeaveManagementSystem"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".backend.NoInternet"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".backend.students.Leave_Histroy_User"
             android:exported="false" />
         <activity
-            android:name=".Spalsh"
+            android:name=".backend.students.Manage_Leaves_Users"
+            android:exported="false" />
+        <activity
+            android:name=".backend.students.New_Leave"
+            android:exported="false" />
+        <activity
+            android:name=".backend.students.Leave_Details"
+            android:exported="false" />
+        <activity
+            android:name=".backend.students.Edit_Profile"
+            android:exported="false" />
+        <activity
+            android:name=".backend.students.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".backend.Login"
+            android:exported="false" />
+        <activity
+            android:name=".backend.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/manage_leave_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/BackgroundColor"
+        app:cardPreventCornerOverlap="true"
+        app:cardCornerRadius="8dp"
+        android:clickable="true"
+        android:layout_margin="6dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/leave_type_manage_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:textSize="15sp"
+                    android:text="Seek Leave"/>
+
+                <TextView
+                    android:id="@+id/leave_duration_manage_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:layout_marginTop="6dp"
+                    android:text="21/10/2021 - 22/10/2021"/>
+            </LinearLayout>
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:focusable="true"
+                android:id="@+id/manage_cancel"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                app:cardCornerRadius="5.42dp"
+                android:clickable="true"
+                app:strokeWidth="0dp"
+                android:layout_gravity="center_vertical"
+                style="@style/PrimaryButton">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/innerCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:contextClickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/manage_cancle_text"
+                        style="@style/PrimaryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/urbanist_semibold"
+                        android:text="cancel"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/manage_cancel_loader"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

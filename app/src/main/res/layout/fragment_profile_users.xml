@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".backend.students.Profile">
+
+
+    <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/editProfile_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_profile"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_picture_container"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="109dp"
+                android:layout_height="109dp"
+                android:clickable="true"
+                android:src="@drawable/profile_picture"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ProgressBar
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="visible"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logout"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mohit Paddhariya"
+            android:fontFamily="@font/urbanist_bold"
+            android:textColor="@color/textMediumColor"
+            android:textSize="21dp"/>
+        
+        <TextView
+            android:id="@+id/enrollment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21SDSCE01038"
+            android:fontFamily="@font/urbanist_bold"
+            android:textColor="@color/textLightColor"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Personal Details"
+        android:fontFamily="@font/urbanist_bold"
+        android:textColor="@color/textDarkColor"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/BackgroundColor"
+        app:cardPreventCornerOverlap="true"
+        app:cardCornerRadius="5dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:padding="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/personal_mail"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mpaddhariya435@rku.ac.in"
+                android:layout_marginLeft="11dp"
+                android:fontFamily="@font/urbanist_medium"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardBackgroundColor="@color/BackgroundColor"
+        app:cardCornerRadius="5dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:padding="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/personal_contact"/>
+
+            <TextView
+                android:id="@+id/phone_nuber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91 8401815038"
+                android:layout_marginLeft="11dp"
+                android:fontFamily="@font/urbanist_medium"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Councilor Details"
+        android:fontFamily="@font/urbanist_bold"
+        android:textColor="@color/textDarkColor"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardBackgroundColor="@color/BackgroundColor"
+        app:cardCornerRadius="5dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:padding="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/faculty_name"/>
+
+            <TextView
+                android:id="@+id/councilor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Janki Kansagra"
+                android:layout_marginLeft="11dp"
+                android:fontFamily="@font/urbanist_medium"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/councilor_email_number_container"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardBackgroundColor="@color/BackgroundColor"
+        app:cardCornerRadius="5dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:padding="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/personal_mail"/>
+
+            <TextView
+                android:id="@+id/councilor_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="janki.kansagra@rku.ac.in"
+                android:layout_marginLeft="11dp"
+                android:fontFamily="@font/urbanist_medium"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/BackgroundColor"
+        app:cardPreventCornerOverlap="true"
+        app:cardCornerRadius="5dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:id="@+id/councilor_phone_number_container"
+            android:padding="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/personal_contact"/>
+
+            <TextView
+                android:id="@+id/councilor_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:fontFamily="@font/urbanist_medium"
+                android:text="+91 8679423436"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

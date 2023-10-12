@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".backend.NoInternet">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="388dp"
+        android:layout_height="291dp"
+        app:lottie_rawRes="@raw/no_internet"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:duration="1500"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textDarkColor"
+        android:fontFamily="@font/urbanist_bold"
+        android:textSize="40sp"
+        android:text="Oops..."/>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:textColor="@color/textLightColor"
+        android:fontFamily="@font/urbanist_bold"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:text="@string/connection_lost"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reconnect"
+        android:layout_marginTop="94dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        style="@style/PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/urbanist_semibold"
+        android:text="Try Again"
+        app:cornerRadius="10dp" />
+
+</LinearLayout>

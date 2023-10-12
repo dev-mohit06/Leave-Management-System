@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".backend.Login">
 
     <ImageView
         android:id="@+id/imageView"
@@ -195,16 +195,53 @@
                         android:fontFamily="@font/urbanist_medium"
                         android:layout_marginBottom="20dp"
                         android:text="@string/forgot_password"/>
-
-                    <com.google.android.material.button.MaterialButton
+                    
+                    <com.google.android.material.card.MaterialCardView
                         android:id="@+id/login"
-                        style="@style/PrimaryButton"
                         android:layout_width="match_parent"
-                        android:layout_height="66dp"
-                        android:fontFamily="@font/urbanist_semibold"
-                        android:text="@string/login"
-                        android:textSize="18sp"
-                        app:cornerRadius="10dp"/>
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="10dp"
+                        android:clickable="true"
+                        app:strokeWidth="0dp"
+                        style="@style/PrimaryButton">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/innerLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:contextClickable="true"
+                            android:focusable="true">
+
+                            <TextView
+                                android:id="@+id/loginText"
+                                style="@style/PrimaryButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/urbanist_semibold"
+                                android:text="@string/login"
+                                android:textSize="18sp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ProgressBar
+                                android:id="@+id/loader"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:indeterminateTint="@color/white"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
 

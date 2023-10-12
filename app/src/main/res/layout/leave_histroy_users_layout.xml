@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/BackgroundColor"
+        app:cardPreventCornerOverlap="true"
+        app:cardCornerRadius="8dp"
+        android:clickable="true"
+        android:layout_margin="6dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/leave_histroy_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/leave_type_leave_histroy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:textSize="15sp"
+                    android:text="Seek Leave"/>
+
+                <TextView
+                    android:id="@+id/leave_duration_leave_histroy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:layout_marginTop="6dp"
+                    android:text="21/10/2021 - 22/10/2021"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/leave_status_leave_histroy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pending"
+                android:fontFamily="@font/urbanist_extrabold"
+                android:textSize="15sp"
+                android:text="Pending"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".backend.students.New_Leave">
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_marginLeft="8.39dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:fontFamily="@font/urbanist_bold"
+            android:textSize="13.56sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a leave"
+        android:textColor="@color/textDarkColor"
+        android:textSize="22sp"
+        android:fontFamily="@font/urbanist_bold"/>
+
+    <Spinner
+        android:id="@+id/leaveType"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:background="@drawable/login_input"
+        android:typeface="@font/urbanist_bold"
+        android:spinnerMode="dropdown"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/startingDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_input"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="15dp"
+        android:textColorHint="#8391A1"
+        android:fontFamily="@font/urbanist_medium"
+        android:textSize="18sp"
+        android:drawableEnd="@drawable/calender"
+        android:paddingRight="15dp"
+        android:focusable="false"
+        android:hint="Starting Date"/>
+
+    <EditText
+        android:id="@+id/endingDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_input"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="15dp"
+        android:textColorHint="#8391A1"
+        android:fontFamily="@font/urbanist_medium"
+        android:textSize="18sp"
+        android:drawableEnd="@drawable/calender"
+        android:paddingRight="15dp"
+        android:focusable="false"
+        android:hint="Ending Date"/>
+
+    <EditText
+        android:id="@+id/details"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="15dp"
+        android:hint="Details"
+        android:fontFamily="@font/urbanist_medium"
+        android:textColorHint="#8391A1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_input"/>
+
+    <Spinner
+        android:id="@+id/reason"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:background="@drawable/login_input"
+        android:typeface="@font/urbanist_bold"
+        android:textSize="18sp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="18dp"
+        android:layout_gravity="center"
+        android:id="@+id/apply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5.42dp"
+        android:clickable="true"
+        app:strokeWidth="0dp"
+        style="@style/PrimaryButton">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/innerLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/applyText"
+                style="@style/PrimaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/urbanist_semibold"
+                android:text="Apply"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/loader"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:indeterminateTint="@color/white"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
